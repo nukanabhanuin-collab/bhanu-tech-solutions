@@ -9,7 +9,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
 
 const services = [
@@ -83,16 +82,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
         >
-          <div className="hero-visual-topline">
-            <span className="hero-visual-index">01 / LEADERSHIP</span>
-            <Sparkles size={19} aria-hidden="true" />
-          </div>
-
           <div className="hero-artwork">
             <div
               className="hero-artwork-orbit hero-artwork-orbit-one"
               aria-hidden="true"
             />
+
             <div
               className="hero-artwork-orbit hero-artwork-orbit-two"
               aria-hidden="true"
@@ -114,26 +109,7 @@ export default function Hero() {
                   <strong>Bhanu Prakash Nukana</strong>
                   <span>Founder · Bhanu Tech Solutions</span>
                 </div>
-                <Sparkles size={20} aria-hidden="true" />
               </div>
-            </div>
-
-            <div className="hero-float-card hero-float-card-top">
-              <span className="hero-float-icon">
-                <Sparkles size={19} aria-hidden="true" />
-              </span>
-              <span>
-                <strong>Creative thinking</strong>
-                <small>Ideas that stand out</small>
-              </span>
-            </div>
-
-            <div className="hero-float-card hero-float-card-bottom">
-              <span className="hero-float-status" />
-              <span>
-                <strong>Built for growth</strong>
-                <small>Digital-first solutions</small>
-              </span>
             </div>
           </div>
 

@@ -10,7 +10,9 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Why Choose Us", href: "#why-choose-us" },
   { label: "Our Work", href: "#work" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -20,6 +22,8 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <nav className="navbar" aria-label="Main navigation">
+
+        {/* Logo */}
         <Link
           href="#home"
           className="navbar-brand"
@@ -35,6 +39,7 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Desktop Navigation */}
         <div className="navbar-links">
           {navLinks.map((link) => (
             <Link key={link.label} href={link.href}>
@@ -43,10 +48,12 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* CTA Button */}
         <Link href="#contact" className="navbar-cta">
           Let's Talk <ArrowUpRight size={17} />
         </Link>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           className="navbar-menu-button"
@@ -57,6 +64,7 @@ export default function Navbar() {
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
+        {/* Mobile Navigation */}
         {menuOpen && (
           <div className="mobile-nav">
             {navLinks.map((link) => (
@@ -78,6 +86,7 @@ export default function Navbar() {
             </Link>
           </div>
         )}
+
       </nav>
     </header>
   );

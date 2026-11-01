@@ -65,8 +65,8 @@ export default function Services() {
           className="services-heading"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <span className="services-eyebrow">
             <span />
@@ -95,25 +95,40 @@ export default function Services() {
               <motion.article
                 className="service-card"
                 key={service.number}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.07,
+                  ease: "easeOut",
+                }}
+                whileHover={{ y: -6 }}
               >
                 <div className="service-card-top">
                   <div className="service-icon">
-                    <Icon size={23} strokeWidth={1.8} />
+                    <Icon
+                      size={23}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
                   </div>
 
-                  <span className="service-number">{service.number}</span>
+                  <span className="service-number">
+                    {service.number}
+                  </span>
                 </div>
 
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
 
-                <a href="#contact" className="service-link">
+                <a
+                  href="#contact"
+                  className="service-link"
+                  aria-label={`Enquire about ${service.title}`}
+                >
                   Explore service
-                  <ArrowUpRight size={17} />
+                  <ArrowUpRight size={17} aria-hidden="true" />
                 </a>
               </motion.article>
             );
