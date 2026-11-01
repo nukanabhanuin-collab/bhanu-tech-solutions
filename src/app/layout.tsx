@@ -4,16 +4,21 @@ import "./globals.css";
 
 const siteUrl = "https://www.bhanutechsolutions.com";
 
+const pageTitle =
+  "Bhanu Tech Solutions | Best Digital Marketing Agency In Hyderabad";
+
+const pageDescription =
+  "Bhanu Tech Solutions helps businesses grow through professional website development, digital marketing, social media management, creative branding, graphic designing and video editing.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Bhanu Tech Solutions | Digital Marketing & Web Development",
+    default: pageTitle,
     template: "%s | Bhanu Tech Solutions",
   },
 
-  description:
-    "Bhanu Tech Solutions helps businesses grow through professional website development, digital marketing, social media management, creative branding and video editing.",
+  description: pageDescription,
 
   alternates: {
     canonical: "/",
@@ -21,7 +26,9 @@ export const metadata: Metadata = {
 
   keywords: [
     "Bhanu Tech Solutions",
-    "Website Development",
+    "Best Digital Marketing Agency In Hyderabad",
+    "Digital Marketing Agency Hyderabad",
+    "Website Development Hyderabad",
     "Digital Marketing",
     "Social Media Management",
     "Graphic Designing",
@@ -29,6 +36,8 @@ export const metadata: Metadata = {
     "SEO Services",
     "Creative Branding",
     "Business Website Design",
+    "Website Development",
+    "Digital Marketing Agency Andhra Pradesh",
   ],
 
   applicationName: "Bhanu Tech Solutions",
@@ -53,31 +62,31 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Bhanu Tech Solutions",
-    title: "Bhanu Tech Solutions | Your Digital Growth Partner",
+    title: pageTitle,
     description:
-      "Creative. Strategic. Results-Driven. Website Development, Digital Marketing and Creative Solutions.",
+      "Best Digital Marketing Agency in Hyderabad offering Website Development, Social Media Management, Graphic Designing, Video Editing and Creative Solutions.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bhanu Tech Solutions",
+        alt: "Bhanu Tech Solutions - Best Digital Marketing Agency In Hyderabad",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Bhanu Tech Solutions",
+    title: pageTitle,
     description:
-      "Your Digital Growth Partner. Website Development, Digital Marketing and Creative Solutions.",
+      "Your Digital Growth Partner. Website Development, Digital Marketing, Social Media Management and Creative Solutions.",
     images: ["/og-image.png"],
   },
 
   icons: {
-  icon: "/favicon.ico.png",
-  apple: "/apple-touch-icon.png",
-},
+    icon: "/favicon.ico.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
